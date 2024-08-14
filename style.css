@@ -1,0 +1,44 @@
+body {
+    margin: 0;
+    overflow: hidden;
+    background: black;
+}
+
+.sky {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    background: radial-gradient(circle at bottom, #001, #000);
+    overflow: hidden;
+}
+
+.moon {
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    width: 200px;
+    height: 200px;
+    margin-left: -100px;
+    background: radial-gradient(circle at center, #fff, #ccc);
+    border-radius: 50%;
+    box-shadow: 0 0 30px rgba(255, 255, 255, 0.5);
+}
+
+.star {
+    position: absolute;
+    width: 2px;
+    height: 2px;
+    background: white;
+    border-radius: 50%;
+    box-shadow: 0 0 5px white;
+    animation: twinkle 2s infinite;
+}
+
+@keyframes twinkle {
+    0%, 100% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0.5;
+    }
+}
